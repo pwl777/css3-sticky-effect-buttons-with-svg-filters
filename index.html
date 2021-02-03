@@ -1,0 +1,124 @@
+<!------ HTML Document - CSS3 - Sticky Effect Buttons With SVG Filters ------>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS3 - Sticky Effect Buttons With SVG Filters</title>
+  <!-- Meta Data Tags -->
+    <meta charset="UTF-8"><!-- Unicode Character Encoding -->
+    <meta name="description" content="CSS3 - Sticky Effect Buttons With SVG Filters">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Pierson Lippard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Responsive Viewport Background Tag -->
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icon CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+ 
+    
+    <!-- Your own stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+  </head><!-- HTML head end -->
+  <body>
+    <!--
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-youtube"></i>
+      <i class="fab fa-linkedin-in"></i>
+      <i class="fab fa-google-plus-g"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-pinterest-p"></i>
+      <i class="fab fa-whatsapp"></i>
+      <i class="fab fa-twitch"></i>
+    -->
+    <h1>Sticky Effect Buttons With SVG Filters<br>CSS3</h1>
+  <div class="container">
+    <div class="button">
+      <i class="fab fa-facebook-f"></i>
+        <div class="blurred">
+          <span></span>
+          <span></span>
+        </div><!-- Div blurred end -->
+    </div><!-- Div facebook Icon end -->
+    <div class="button">
+      <i class="fab fa-instagram"></i>
+      <div class="blurred">
+        <span></span>
+        <span></span>
+      </div><!-- Div blurred end -->
+    </div><!-- Div instagram Icon end -->
+    <div class="button">
+      <i class="fab fa-youtube"></i>
+      <div class="blurred">
+        <span></span>
+        <span></span>
+      </div><!-- Div blurred end -->
+    </div><!-- Div youtube Icon end -->
+    <div class="button">
+      <i class="fab fa-linkedin-in"></i>
+      <div class="blurred">
+        <span></span>
+        <span></span>
+      </div><!-- Div blurred end -->
+    </div><!-- Div linkedin Icon end -->
+    <div class="button">
+      <i class="fab fa-google-plus-g"></i>
+      <div class="blurred">
+        <span></span>
+        <span></span>
+      </div><!-- Div blurred end -->
+    </div><!-- Div google Icon end -->
+    <div class="button">
+      <i class="fab fa-twitter"></i>
+      <div class="blurred">
+        <span></span>
+        <span></span>
+      </div><!-- Div blurred end -->
+    </div><!-- Div twitter Icon end -->
+    <div class="button">
+      <i class="fab fa-pinterest-p"></i>
+      <div class="blurred">
+        <span></span>
+        <span></span>
+      </div><!-- Div blurred end -->
+    </div><!-- Div pinterest Icon end -->
+    <div class="button">
+      <i class="fab fa-whatsapp"></i>
+      <div class="blurred">
+        <span></span>
+        <span></span>
+      </div><!-- Div blurred end -->
+    </div><!-- Div whatsapp Icon end -->
+    <div class="button">
+      <i class="fab fa-twitch"></i>
+      <div class="blurred">
+        <span></span>
+        <span></span>
+      </div><!-- Div blurred end -->
+    </div><!-- Div twitch Icon end -->
+  </div>
+    <svg>
+      <defs>
+          <filter id="goo">
+              <feGaussianBlur in='SourceGraphic' stdDeviation='10' result='name'/>
+              <feColorMatrix in='name' mode='matrix'
+                  values='1 0 0 0 0
+                          0 1 0 0 0
+                          0 0 1 0 0
+                          0 0 0 30 -15' result='aab'/>
+              <feBlend in='SourceGraphic' in2='aab'/>
+          </filter>
+      </defs>
+  </svg>
+
+
+    <script src="script.js"></script><!-- JavaScript end -->
+
+  </body><!-- HTML body end -->
+</html>

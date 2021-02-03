@@ -1,0 +1,132 @@
+/* ------ CSS3 - Sticky Effect Buttons With SVG Filters ------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #e4d8ea;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23fdfdfd' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    filter: drop-shadow(-1px 6px 3px rgba(133, 133, 133, 0.5));
+}
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5rem;
+    text-align: center;
+    margin: 70px;
+    color: white;
+}
+.container {
+    width: 360px;
+    height: 360px;
+    position: relative;
+    margin: 100px auto;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    display: grid;
+}
+.button {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    z-index: 10;
+    color: #3C5A99;
+    filter: drop-shadow(-1px 6px 3px rgba(133, 133, 133, 0.5));
+}
+.blurred {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    filter: url(#goo);
+}
+.blurred::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 100%;
+    transition: 1.5s cubic-bezier(0,2,.61,-0.05);
+}
+.blurred::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 100%;
+    transition: 1.7s cubic-bezier(0,2,.61,-0.05);
+}
+.blurred > span:nth-of-type(1),
+.blurred > span:nth-of-type(2) {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    left: 0;
+    background-color: white;
+    border-radius: 100%;
+    transition: 1.4s cubic-bezier(0,2,.61,-0.05);
+}
+.button:hover .blurred::before {
+    width: 70px;
+    height: 70px;
+    top: 50%;
+    left: 50%;
+}
+.button:hover .blurred::after {
+    width: 35px;
+    height: 35px;
+    top: 20px;
+    left: 65px;
+}
+.button:hover .blurred > span:nth-of-type(1) {
+    width: 50px;
+    height: 50px;
+    top: -15px;
+    left: -30px;
+}
+.button:hover .blurred > span:nth-of-type(2) {
+    width: 35px;
+    height: 35px;
+    top: 80px;
+    left: -20px;
+}
+.fa-instagram {
+    color: #c32aa3;
+}
+.fa-youtube {
+    color: #ff0000;
+}
+.fa-linkedin-in {
+    color: #007bb5;
+}
+.fa-google-plus-g {
+    color: #db4437;
+}
+.fa-twitter {
+    color: #1da1f2;
+}
+.fa-pinterest-p {
+    color: #bd081c;
+}
+.fa-whatsapp {
+    color: #25d366;
+}
+.fa-twitch {
+    color: #6441a4;
+}
